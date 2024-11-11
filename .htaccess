@@ -1,0 +1,19 @@
+
+# Redirect ke frontend sebagai default
+RewriteEngine On
+
+# Jika permintaan ke root, arahkan ke folder `frontend`
+RewriteCond %{REQUEST_URI} !^/backend/
+RewriteCond %{REQUEST_URI} !^/frontend/
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico)$
+RewriteRule ^$ /frontend/ [L]
+
+# Pretty URLs untuk frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^frontend/(.*)$ frontend/index.html [L,QSA]
+
+# Pretty URLs untuk backend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^backend/(.*)$ backend/index.php [L,QSA]
