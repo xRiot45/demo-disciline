@@ -20,4 +20,4 @@ jobs:
         username: if0_37678622
         password: 67GJcIQSqc
         local-dir: ./
-        server-dir: /demo-disciline-devuna.ct.ws/htdocs/
+        server-dir: /htdocs/diciline
