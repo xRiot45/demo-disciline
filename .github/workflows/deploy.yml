@@ -17,7 +17,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftpupload.net
-        username: if0_37678622
-        password: 67GJcIQSqc
+        username: if0_37693572
+        password: veOMtbO8oQO9l
         local-dir: ./
         server-dir: /htdocs/diciline/
