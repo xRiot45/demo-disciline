@@ -5,19 +5,19 @@ on:
     branches:
       - main
 
-      jobs:
-        ftp-deploy:
-          runs-on: ubuntu-latest
-          steps:
-          - name: Checkout the repository
-            uses: actions/checkout@v2
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
 
-          - name: Deploy to FTP server
-            uses: SamKirkland/FTP-Deploy-Action@4.3.0
-            with:
-              server: ftpupload.net
-              username: if0_37678622
-              password: 67GJcIQSqc
-              local-dir: ./
-              server-dir: /demo-disciline-devuna.ct.ws/htdocs/
-    
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to FTP server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftpupload.net
+        username: ${{ secrets.FTP_USERNAME }}   # Gunakan secrets untuk username
+        password: ${{ secrets.FTP_PASSWORD }}   # Gunakan secrets untuk password
+        local-dir: ./                            # Direktori lokal yang ingin diupload (di sini, root repositori)
+        server-dir: /demo-disciline-devuna.ct.ws/htdocs/  # Path di server tempat file akan diupload
