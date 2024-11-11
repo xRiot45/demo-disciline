@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Demo DevUna</title>
+  <style>
+    /* Reset styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body dan kontainer */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .header {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animasi */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsif untuk perangkat mobile */
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .header {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container fade-in">
+    <img src="https://via.placeholder.com/150" alt="Logo DevUna" class="logo" />
+    <h1 class="header">Proyek Demo DevUna</h1>
+    <p class="description">Selamat datang di website resmi proyek demo yang dikelola oleh tim DevUna. Kami membangun solusi inovatif dengan teknologi terbaru.</p>
+    <button class="cta-button" onclick="showMessage()">Jelajahi Lebih Lanjut</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function showMessage() {
+      const messageElement = document.getElementById('message');
+      messageElement.textContent = "Terima kasih telah menjelajahi demo ini! Nantikan pembaruan menarik lainnya.";
+      messageElement.style.color = "#28a745";
+      messageElement.style.fontSize = "1.2rem";
+    }
+  </script>
+</body>
+</html>
